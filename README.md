@@ -1,4 +1,4 @@
-Color to Greyscale Conversion with CUDA programming
+# Color to Greyscale Conversion with CUDA programming
 
 A common way to represent color images is known as RGBA - the color
 is specified by how much Red, Green, and Blue is in it.
