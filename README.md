@@ -1,28 +1,34 @@
-// Color to Greyscale Conversioncxv
-cvcvxv
-//A common way to represent color images is known as RGBA - the color
-//is specified by how much Red, Green, and Blue is in it.
-//The 'A' stands for Alpha and is used for transparency; it will be
-//ignored in this homework.
+Color to Greyscale Conversion with CUDA programming
 
-//Each channel Red, Blue, Green, and Alpha is represented by one byte.
-//Since we are using one byte for each color there are 256 different
-//possible values for each color.  This means we use 4 bytes per pixel.
+A common way to represent color images is known as RGBA - the color
+is specified by how much Red, Green, and Blue is in it.
+The 'A' stands for Alpha and is used for transparency; it will be
+ignored in this homework.
 
-//Greyscale images are represented by a single intensity value per pixel
-//which is one byte in size.
+Each channel Red, Blue, Green, and Alpha is represented by one byte.
+Since we are using one byte for each color there are 256 different
+possible values for each color.  This means we use 4 bytes per pixel.
 
-//To convert an image from color to grayscale one simple method is to
-//set the intensity to the average of the RGB channels.  But we will
-//use a more sophisticated method that takes into account how the eye 
-//perceives color and weights the channels unequally.
+Greyscale images are represented by a single intensity value per pixel
+which is one byte in size.
 
-//The eye responds most strongly to green followed by red and then blue.
-//The NTSC (National Television System Committee) recommends the following
-//formula for color to greyscale conversion:
+To convert an image from color to grayscale one simple method is to
+set the intensity to the average of the RGB channels.  But we will
+use a more sophisticated method that takes into account how the eye 
+perceives color and weights the channels unequally.
 
-//I = .299f * R + .587f * G + .114f * B
+The eye responds most strongly to green followed by red and then blue.
+The NTSC (National Television System Committee) recommends the following
+formula for color to greyscale conversion:
 
-//Notice the trailing f's on the numbers which indicate that they are 
-//single precision floating point constants and not double precision
-//constants.
+I = .299f * R + .587f * G + .114f * B
+
+Notice the trailing f's on the numbers which indicate that they are 
+single precision floating point constants and not double precision
+constants.
+
+Another way to convert an image from color to grayscale is the lightness technique 
+is a one which averages the most prominent and least prominent colors
+The output (greyImage) at each pixel should be the result of
+applying the formula: output = (max( R , G , B ) + min( R , G , B ))/2
+
