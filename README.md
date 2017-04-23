@@ -1,4 +1,4 @@
-# Color to Greyscale Conversion with CUDA programming
+# Color to Greyscale Conversion with CUDA Programming
 
 A common way to represent color images is known as RGBA - the color
 is specified by how much Red, Green, and Blue is in it.
@@ -30,5 +30,7 @@ constants.
 Another way to convert an image from color to grayscale is the lightness technique 
 is a one which averages the most prominent and least prominent colors
 The output (greyImage) at each pixel should be the result of
-applying the formula: output = (max( R , G , B ) + min( R , G , B ))/2
+applying the formula: 
+
+output = (max( R , G , B ) + min( R , G , B ))/2
 
